@@ -10,52 +10,89 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AVCam/AVCamViewController.swift"
-            timestampString = "428740449.855367"
+            timestampString = "429165078.426346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "toggleMovieRecording(_:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "captureOutput(_:didFinishRecordingToOutputFileAtURL:fromConnections:error:)"
             landmarkType = "5">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent>
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVCam.AVCamViewController.captureOutput (AVCam.AVCamViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.AVCaptureFileOutput&gt;, didFinishRecordingToOutputFileAtURL : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSURL&gt;, fromConnections : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;Swift.AnyObject&gt;&gt;, error : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSError&gt;) -&gt; ()"
+                  moduleName = "AVCam"
+                  urlString = "file:///Users/ericzou/Dropbox/projects/try_swift/AVCam/AVCam/AVCamViewController.swift"
+                  timestampString = "429082791.643567"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSURL&gt;, @owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSError&gt;) -&gt; (@unowned ()) to @callee_unowned @objc_block (@unowned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSURL&gt;, @unowned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSError&gt;) -&gt; (@unowned ())"
+                  moduleName = "AVCam"
+                  urlString = "file:///Users/ericzou/Dropbox/projects/try_swift/AVCam/AVCam/AVCamViewController.swift"
+                  timestampString = "429082791.643723"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AVCam/AVCamPreviewView.swift"
-            timestampString = "428733377.157532"
+            filePath = "AVCam/AVCamViewController.swift"
+            timestampString = "429165007.774526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "setSession(_:)"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "captureOutput(_:didFinishRecordingToOutputFileAtURL:fromConnections:error:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AVCam/AVCamPreviewView.swift"
-            timestampString = "428733377.157532"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "setSession(_:)"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVCam.AVCamViewController.captureOutput (AVCam.AVCamViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.AVCaptureFileOutput&gt;, didFinishRecordingToOutputFileAtURL : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSURL&gt;, fromConnections : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;Swift.AnyObject&gt;&gt;, error : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSError&gt;) -&gt; ()"
+                  moduleName = "AVCam"
+                  urlString = "file:///Users/ericzou/Dropbox/projects/try_swift/AVCam/AVCam/AVCamViewController.swift"
+                  timestampString = "429166261.679365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVCam.AVCamViewController.captureOutput (AVCam.AVCamViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.AVCaptureFileOutput&gt;, didFinishRecordingToOutputFileAtURL : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSURL&gt;, fromConnections : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;Swift.AnyObject&gt;&gt;, error : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSError&gt;) -&gt; ()"
+                  moduleName = "AVCam"
+                  urlString = "file:///Users/ericzou/Dropbox/projects/try_swift/AVCam/AVCam/AVCamViewController.swift"
+                  timestampString = "429166261.679529"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "756">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

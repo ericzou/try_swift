@@ -17,31 +17,40 @@
 // how to use UIAlertView to debug
 // difference between viewDidLoad and viewWillAppear :viewDidLoad called once, viewWillAppear called everytime view appears
 // how to cast array to a different type of array: AVCaptureDevice.devicesWithMediaType(mediaType) as [AVCaptureDevice]
+// how to use function as 
 
-import Foundation
 import UIKit
 import AVFoundation
+import AssetsLibrary
 
-class AVCamViewController: UIViewController {
+class AVCamViewController: UIViewController,  AVCaptureFileOutputRecordingDelegate{
 
-    @IBOutlet strong var previewView: AVCamPreviewView!
+    @IBOutlet var previewView: AVCamPreviewView!
     @IBOutlet var recordButton: UIButton!
     
     @IBAction func toggleMovieRecording(sender: AnyObject) {
         println("button tapped")
+        if !self.movieFileOutput.recording {
+            println("should be recording")
+            var outputFilePath: NSString = NSTemporaryDirectory().stringByAppendingPathComponent("movie")
+            self.movieFileOutput.startRecordingToOutputFileURL(NSURL.fileURLWithPath(outputFilePath), recordingDelegate: self)
+        } else {
+            println("should be stopping")
+            self.movieFileOutput.stopRecording()
+        }
     }
     
     var session: AVCaptureSession!
     var deviceAuthorized: Bool = false
-
+    var movieFileOutput: AVCaptureMovieFileOutput! = nil
     
     func isSessionRunningAndDeviceAuthorized() -> Bool {
         return self.session.running && self.deviceAuthorized
     }
     
-    func keyPathsForValuesAffectingSessionRunningAndDeviceAuthorized() -> NSSet{
-        return NSSet(objects:["session.running", "deviceAuthorized", nil]) // this is not in the document
-    }
+//    func keyPathsForValuesAffectingSessionRunningAndDeviceAuthorized() -> NSSet{
+//        return NSSet(objects:["session.running", "deviceAuthorized", nil]) // this is not in the document
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +64,14 @@ class AVCamViewController: UIViewController {
         var videoDeviceInput: AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(videoDevice, error: error) as AVCaptureDeviceInput
         
         self.session.addInput(videoDeviceInput)
+        
+        var movieFileOutput = AVCaptureMovieFileOutput()
+        
+        if self.session.canAddOutput(movieFileOutput) {
+            self.session.addOutput(movieFileOutput)
+            self.movieFileOutput = movieFileOutput
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -70,7 +87,7 @@ class AVCamViewController: UIViewController {
                 self.deviceAuthorized = true
                 dispatch_async(dispatch_get_main_queue(), {
                     UIAlertView(title: "Access granted", message: "you are good", delegate: self, cancelButtonTitle: "OK").show()
-                    })
+                })
 
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
@@ -94,6 +111,30 @@ class AVCamViewController: UIViewController {
             }
         }
         return captureDevice
+    }
+    
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
+        func cb(assetURL: NSURL!, error: NSError!) {
+            if error {
+                println("cb called but error", assetURL, error)
+            } else {
+                println("cb called but no error", assetURL, error)
+            }
+        }
+        println("capture output called", outputFileURL)
+        
+        var somePath = NSTemporaryDirectory()
+//        //var somePath = NS
+//        var path  = somePath.stringByAppendingPathComponent("someFile")
+//        var str = "here is some money"
+//        var error: NSErrorPointer = nil
+//        str.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: error)
+//        
+        var fm = NSFileManager.defaultManager()
+        var arry = fm.contentsOfDirectoryAtPath(somePath, error: nil)
+        
+
+        ALAssetsLibrary().writeVideoAtPathToSavedPhotosAlbum(outputFileURL, completionBlock: cb)
     }
     
 }
