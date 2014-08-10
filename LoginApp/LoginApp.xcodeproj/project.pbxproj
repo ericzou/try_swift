@@ -12,6 +12,9 @@
 		8F2BE34619949291000BE59F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BE34419949291000BE59F /* Main.storyboard */; };
 		8F2BE34819949291000BE59F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BE34719949291000BE59F /* Images.xcassets */; };
 		8F2BE35419949291000BE59F /* LoginAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BE35319949291000BE59F /* LoginAppTests.swift */; };
+		8F76691A199734A400A4BC0B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F766919199734A400A4BC0B /* Person.swift */; };
+		8F76691D199735A100A4BC0B /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76691C199735A100A4BC0B /* Friends.swift */; };
+		8F76691F199736E600A4BC0B /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76691E199736E600A4BC0B /* FriendsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 		8F2BE34D19949291000BE59F /* LoginAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2BE35219949291000BE59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2BE35319949291000BE59F /* LoginAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppTests.swift; sourceTree = "<group>"; };
+		8F766919199734A400A4BC0B /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8F76691B199734ED00A4BC0B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		8F76691C199735A100A4BC0B /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		8F76691E199736E600A4BC0B /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +84,13 @@
 			children = (
 				8F2BE34019949291000BE59F /* AppDelegate.swift */,
 				8F2BE34219949291000BE59F /* ViewController.swift */,
+				8F76691E199736E600A4BC0B /* FriendsTableViewController.swift */,
 				8F2BE34419949291000BE59F /* Main.storyboard */,
+				8F766919199734A400A4BC0B /* Person.swift */,
+				8F76691B199734ED00A4BC0B /* MyPlayground.playground */,
 				8F2BE34719949291000BE59F /* Images.xcassets */,
 				8F2BE33E19949291000BE59F /* Supporting Files */,
+				8F76691C199735A100A4BC0B /* Friends.swift */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -208,8 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F76691D199735A100A4BC0B /* Friends.swift in Sources */,
+				8F76691A199734A400A4BC0B /* Person.swift in Sources */,
 				8F2BE34319949291000BE59F /* ViewController.swift in Sources */,
 				8F2BE34119949291000BE59F /* AppDelegate.swift in Sources */,
+				8F76691F199736E600A4BC0B /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +413,7 @@
 				8F2BE35919949291000BE59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F2BE35A19949291000BE59F /* Build configuration list for PBXNativeTarget "LoginAppTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +422,7 @@
 				8F2BE35C19949291000BE59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
