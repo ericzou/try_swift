@@ -8,7 +8,12 @@
 
 import Foundation
 
-class Person {
+
+func == (lhs:Person,rhs:Person) -> Bool {
+    return lhs.name == rhs.name
+}
+
+class Person: Equatable {
     var name: String
     
     init(name: String) {

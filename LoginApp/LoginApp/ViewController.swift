@@ -15,10 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     @IBAction func signIn(sender: AnyObject) {
-        println("button touched")
-        println(self.username.text)
-        println("password is")
-        self.performSegueWithIdentifier("loginSuccess", sender: self)
+        self.performSegueWithIdentifier("FriendsViewController", sender: self)
     }
     
     override func viewDidLoad() {
